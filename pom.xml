@@ -306,20 +306,20 @@
 
     <scm>
         <url>https://github.com/sigmalab-projects/redis-maven-plugin</url>
-        <connection>scm:git:https://github.com/sigmalab-projects/redis-maven-plugin.git</connection>
-        <developerConnection>scm:git:https://github.com/sigmalab-projects/redis-maven-plugin.git</developerConnection>
+        <connection>scm:git:https://github.com/sigmalab-projects/hsqldb-maven-plugin.git</connection>
+        <developerConnection>scm:git:https://github.com/sigmalab-projects/hsqldb-maven-plugin.git</developerConnection>
     </scm>
 
     <issueManagement>
         <system>GitHub Issue Tracking</system>
-        <url>https://github.com/sigmalab-projects/redis-maven-plugin/issues</url>
+        <url>https://github.com/sigmalab-projects/hsqldb-maven-plugin/issues</url>
     </issueManagement>
 
     <distributionManagement>
         <repository>
-            <id>bintray-sigmalab-maven-releases-redis-maven-plugin</id>
-            <name>sigmalab-maven-releases-redis-maven-plugin</name>
-            <url>https://api.bintray.com/maven/sigmalab/maven-releases/redis-maven-plugin</url>
+            <id>bintray-sigmalab-maven-releases-hsqldb-maven-plugin</id>
+            <name>sigmalab-maven-releases-hsqldb-maven-plugin</name>
+            <url>https://api.bintray.com/maven/sigmalab/maven-releases/hsqldb-maven-plugin</url>
         </repository>
     </distributionManagement>
 </project>
