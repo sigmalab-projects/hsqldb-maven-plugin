@@ -2,12 +2,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.googlecode.its.t7mp</groupId>
+    <groupId>de.sigmalab.maven.plugins</groupId>
     <artifactId>test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Run</name>
-    <description>Test t7:run</description>
+    <name>run</name>
+    <description>Run HSQLDB in integration-test phase with flyway-migration.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
