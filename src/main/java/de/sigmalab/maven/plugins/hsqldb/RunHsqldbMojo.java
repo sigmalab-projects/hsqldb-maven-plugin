@@ -21,12 +21,20 @@ public class RunHsqldbMojo extends AbstractMojo {
     @Parameter(property = "hsqldb.server.port", defaultValue = "9001")
     public Integer port;
 
-    @Parameter
-    private Map<String, String> severProperties = new HashMap<String, String>();
+    @Parameter(property = "hsqldb.server.logServerProperties", defaultValue = "true")
+    private boolean logServerProperties = true;
 
+    @Parameter
+    private Map<String, String> serverProperties = new HashMap<String, String>();
+
+    @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
         HsqlDbContainer container = new HsqlDbContainer();
-        container.setServerProperties(severProperties);
+        if (logServerProperties) {
+            logServerProperties(serverProperties);
+        }
+
+        container.setServerProperties(serverProperties);
         container.setPort(port);
         try {
             container.afterProperties();
@@ -38,6 +46,16 @@ public class RunHsqldbMojo extends AbstractMojo {
             throw new MojoExecutionException(e.getMessage(), e);
         }
 
+    }
+
+    protected void logServerProperties(final Map<String, String> severProperties2) {
+        getLog().info("----- SERVERPROPERTIES START -----");
+
+        for (Map.Entry<String, String> entry : severProperties2.entrySet()) {
+            getLog().info(entry.getKey() + "  :  " + entry.getValue());
+        }
+
+        getLog().info("----- SERVERPROPERTIES END -----");
     }
 
 }

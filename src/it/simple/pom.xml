@@ -22,8 +22,9 @@
                 <configuration>
                     <port>9002</port>
                     <serverProperties>
-                        <server.database.0>file:${project.build.directory}/xdb</server.database.0>
-                        <server.name.0>xdb</server.name.0>
+                        <server.database.0>file:${project.build.directory}/xdb;sql.syntax_pgs=true;user=SA;password=SA</server.database.0>
+                        <server.dbname.0>xdb</server.dbname.0>
+                        <server.remote_open>true</server.remote_open>
                     </serverProperties>
                 </configuration>
                 <executions>
@@ -49,7 +50,8 @@
                 <version>3.0</version>
                 <configuration>
                     <url>jdbc:hsqldb:hsql://localhost:9002/xdb</url>
-                    <user>sa</user>
+                    <user>SA</user>
+                    <password>SA</password>
                 </configuration>
                 <dependencies>
                     <dependency>
